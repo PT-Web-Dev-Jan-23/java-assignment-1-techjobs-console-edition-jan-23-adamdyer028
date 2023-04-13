@@ -49,7 +49,7 @@ public class TechJobsTest {
     public void testPrintJobsNoResults() throws IOException {
         String input = "0\n2\nChicago\nx";
         String output = runProgramWithInput(input);
-        String expected = getFileContents("src/test/resources/testPrintJobsNoResults.txt");
+        String expected = getFileContents("src/test/resources/testPrintJobsNoResults.txt").replaceAll("\r", "");
         assertEquals(expected, output);
     }
 
